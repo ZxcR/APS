@@ -1,2 +1,3 @@
-vendor
-log
+.idea
+/src/vendor
+/src/log/*
