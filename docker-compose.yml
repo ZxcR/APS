@@ -1,0 +1,27 @@
+version: '3.7'
+
+services:
+  app_test:
+    build:
+      context: .
+      dockerfile: ./docker/php/Dockerfile
+    container_name: app_test
+    volumes:
+      - ./src:/var/www/html
+    ports:
+      - "9000:9000"
+    depends_on:
+      - rabbitmq
+    links:
+      - rabbitmq
+  rabbitmq:
+    image: 'bitnami/rabbitmq:latest'
+    container_name: rabbitmq
+    volumes:
+      - rabbitvolume:/data
+    ports:
+      - 5672:5672
+      - 15672:15672
+
+volumes:
+  rabbitvolume: {}

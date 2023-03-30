@@ -1,0 +1,18 @@
+{
+    "name": "aps/test",
+    "autoload": {
+        "psr-4": {
+            "Aps\\Test\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "ZxcR",
+            "email": "yakub-07@mail.ru"
+        }
+    ],
+    "require": {
+        "vladimir163/lead-generator": "dev-master",
+        "php-amqplib/php-amqplib": "^3.5"
+    }
+}
